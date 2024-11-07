@@ -20,15 +20,12 @@ const { title } = Astro.props;
 	</head>
 	<body class="bg-black min-h-screen text-white">
 		<Header />
-		<main class=" m-auto ">
+		<main class="relative">
 			<slot />
 		</main>
 	</body>
 </html>
 <style is:global>
-	*{
-		scrollbar-color: blue;
-	}
 	h1{
 		font-size:4rem;
 		font-weight: 900;

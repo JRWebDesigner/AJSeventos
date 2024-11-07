@@ -1,55 +1,61 @@
 ---
-import Events from '../components/Events/Events.astro';
-import Header from '../components/Header/Header.astro';
-import Layout from '../layouts/Layout.astro';
+import Events from "../components/Events/Events.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 <Layout title="Welcome to Astro.">
-    <div class="relative bg-black w-full h-[97vh] bg-no-repeat bg-cover bg-top">
-        <img class="Banner opacity-85 absolute w-full h-full object-cover object-top" src="https://scontent.flpb1-1.fna.fbcdn.net/v/t39.30808-6/465715677_1027127422758190_6580639191806316818_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=MTRvGja_pDgQ7kNvgHBdq8j&_nc_zt=23&_nc_ht=scontent.flpb1-1.fna&_nc_gid=A3Lyd46RKKJMPVDqTHLBYMH&oh=00_AYBFcil36woWYusA2P7AlKj9GmNKZP2YUnnvhpBiD7syiA&oe=673280C8" alt="Banner principal">
-    </div>
-    <div class="flex flex-col justify-center items-center h-[50vh]">
-        <h1 class="text-center translate-y-10 z-10 duration-[1s]">Bienvenido a AJS eventos</h1>
-        <span class="font-semibold text-3xl opacity-0 duration-[6s]">Haz de tu evento una experiencia inolvidable</span>
-    </div>
-    <div class="max-w-[1000px] m-auto mt-10 text-2xl font-semibold duration-[1s]">
-        <h2 class="mb-5">Organizamos toda clase de eventos:</h2>
-        <Events />
-    </div>
+  <div class="flex flex-col justify-center items-center h-[50vh]">
+    <h1 class="text-center translate-y-10 z-10 duration-[1s]">
+      Bienvenido a AJS eventos
+    </h1>
+    <span class="font-semibold text-3xl opacity-0 duration-[6s]"
+      >Haz de tu evento una experiencia inolvidable</span
+    >
+  </div>
+  <div class="relative bg-black w-full h-[100vh] bg-no-repeat bg-cover bg-top">
+    <img
+      class="Banner absolute w-full h-full object-cover object-top"
+      src="https://scontent.flpb1-1.fna.fbcdn.net/v/t39.30808-6/465715677_1027127422758190_6580639191806316818_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=MTRvGja_pDgQ7kNvgHBdq8j&_nc_zt=23&_nc_ht=scontent.flpb1-1.fna&_nc_gid=A3Lyd46RKKJMPVDqTHLBYMH&oh=00_AYBFcil36woWYusA2P7AlKj9GmNKZP2YUnnvhpBiD7syiA&oe=673280C8"
+      alt="Banner principal"
+    />
+  </div>
+  <div class="max-w-[1000px] m-auto mt-10 text-2xl font-semibold duration-[1s]">
+    <h2 class="mb-5">Organizamos toda clase de eventos:</h2>
+    <Events />
+  </div>
 </Layout>
 <style>
-
-    .Banner{
-        mask-image: linear-gradient(#000 40%, transparent);
-    }
+  .Banner {
+    mask-image: linear-gradient(to top, #000 70%, transparent);
+  }
 </style>
 <script>
-    const Elementstranslate=document.querySelectorAll('.translate-y-10')
-    const ElementsOpacity=document.querySelectorAll('.opacity-0')
-    let options = {
-		root: null,
-		rootMargin: "0px",
-		threshold: 0.5,
-	};
-    function Translate(a, b) {
-		a.forEach((entry) => {
-			if (entry.isIntersecting) {
-				entry.target.classList.remove("translate-y-10");
-			}
-		});
-	}
-    function Opacity(a, b) {
-		a.forEach((entry) => {
-			if (entry.isIntersecting) {
-				entry.target.classList.remove("opacity-0");
-			}
-		});
-	}
-    const observerT=new IntersectionObserver(Translate, options)
-    const observerO=new IntersectionObserver(Opacity, options)
-    Elementstranslate.forEach(translate => {
-        observerT.observe(translate)
+  const Elementstranslate = document.querySelectorAll(".translate-y-10");
+  const ElementsOpacity = document.querySelectorAll(".opacity-0");
+  let options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  };
+  function Translate(a, b) {
+    a.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("translate-y-10");
+      }
     });
-    ElementsOpacity.forEach(opacity => {
-        observerO.observe(opacity)
+  }
+  function Opacity(a, b) {
+    a.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("opacity-0");
+      }
     });
+  }
+  const observerT = new IntersectionObserver(Translate, options);
+  const observerO = new IntersectionObserver(Opacity, options);
+  Elementstranslate.forEach((translate) => {
+    observerT.observe(translate);
+  });
+  ElementsOpacity.forEach((opacity) => {
+    observerO.observe(opacity);
+  });
 </script>
