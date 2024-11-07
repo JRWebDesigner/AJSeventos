@@ -1,0 +1,27 @@
+<nav>
+    <ul class="flex justify-center items-center gap-7 font-bold text-xl">
+        <li><a class="pathname" href="/">Home</a></li>
+        <li><a class="pathname" href="/AboutUs">About us</a></li>
+        <li><a class="pathname" href="/OurDates">Our Dates</a></li>
+        <li><a class="pathname" href="/Contacts">Contact</a></li>
+    </ul>
+</nav>
+<style>
+    .activate{
+        border-bottom: 2px solid;
+        border-color: rgb(185, 173, 255);
+    }
+    li{
+        transition-duration: 150ms;
+        transition-timing-function: ease-out;
+    }
+    li:hover{
+        scale: 1.1;
+    }
+</style>
+<script>
+    const pathnames=document.querySelectorAll('.pathname')
+    pathnames.forEach(pathname => {
+        if(pathname.pathname===location.pathname) pathname.classList.add('activate')    
+    });
+</script>
