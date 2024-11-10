@@ -3,7 +3,37 @@ import Logo from "../Logo/Logo.astro";
 import Nav from "./Nav.astro";
 ---
 
-<header class="sticky top-0 w-full min-h-14 m-auto bg-[#000000] px-10 py-4 flex justify-between items-center z-40">
-        <Logo />
-        <Nav />
+<header
+  class="sticky top-0 w-full min-h-14 m-auto bg-[#000000] px-10 py-4 flex justify-between items-center z-40"
+>
+  <Logo />
+  <Nav />
+  <button id="button_ham" class="md:hidden" type="button">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="rgb(80, 49, 255)"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
+      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+        d="M4 6l16 0"></path><path d="M4 12l16 0"></path><path d="M4 18l16 0"
+      ></path></svg
+    >
+  </button>
 </header>
+<script>
+  const button_ham=document.getElementById('button_ham')
+  const nav_mobile=document.getElementById('nav_mobile')
+  button_ham.addEventListener('click', ()=>{  
+    if(nav_mobile.classList.toggle('visibility')){
+      nav_mobile.classList.replace('visibility','')
+    }
+    else{
+    }
+  })
+</script>

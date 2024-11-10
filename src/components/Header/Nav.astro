@@ -6,7 +6,7 @@
         <a class="pathname" href="/Contacts"><li>Contact</li></a>
     </ul>
 </nav>
-<nav class="md:hidden bg-black absolute top-full right-0 p-10 rounded-bl-[2rem] translate-x-full scale-0">
+<nav id="nav_mobile" class="md:hidden bg-black absolute top-full right-0 p-10 rounded-bl-[2rem] visibility">
     <ul class="flex flex-col justify-end items-center gap-10 font-bold text-xl 2xl:text-2xl">
         <a class="pathname" href="/"><li>Home</li></a>
         <a class="pathname" href="/AboutUs"><li>About us</li></a>
@@ -15,6 +15,10 @@
     </ul>
 </nav>
 <style>
+    .visibility{
+        transform: translateX(100%); 
+        transform: scale(0); 
+    }
     .activate{
         border-bottom: 2px solid;
         border-color: rgb(80, 49, 255);
