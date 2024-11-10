@@ -4,20 +4,21 @@ import Events from "../components/Events/Events.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout title="AJS eventos | Inicio">
-  <div class="flex flex-col justify-center items-center md:h-[50vh]">
+ 
+  <div class="relative bg-black h-[44vh] md:min-h-[105vh] bg-no-repeat bg-cover bg-top">
+    <img
+      class="Banner w-full h-full object-cover md:object-fill object-top"
+      src="https://scontent.flpb1-1.fna.fbcdn.net/v/t39.30808-6/465715677_1027127422758190_6580639191806316818_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=MTRvGja_pDgQ7kNvgHBdq8j&_nc_zt=23&_nc_ht=scontent.flpb1-1.fna&_nc_gid=A3Lyd46RKKJMPVDqTHLBYMH&oh=00_AYBFcil36woWYusA2P7AlKj9GmNKZP2YUnnvhpBiD7syiA&oe=673280C8"
+      alt="Banner principal"
+    />
+  </div>
+  <div class="flex flex-col justify-center items-center h-[30vh]">
     <h1 class="text-center translate-y-10 z-10 duration-[1s] text-2xl md:text-6xl">
       Bienvenido a AJS eventos
     </h1>
     <span class="font-semibold text-center text-lg md:text-3xl opacity-0 duration-[6s]"
       >Haz de tu evento una experiencia inolvidable</span
     >
-  </div>
-  <div class="relative bg-black h-auto md:min-h-[105vh] bg-no-repeat bg-cover bg-top">
-    <img
-      class="Banner w-full h-full object-cover md:object-fill object-top"
-      src="https://scontent.flpb1-1.fna.fbcdn.net/v/t39.30808-6/465715677_1027127422758190_6580639191806316818_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=MTRvGja_pDgQ7kNvgHBdq8j&_nc_zt=23&_nc_ht=scontent.flpb1-1.fna&_nc_gid=A3Lyd46RKKJMPVDqTHLBYMH&oh=00_AYBFcil36woWYusA2P7AlKj9GmNKZP2YUnnvhpBiD7syiA&oe=673280C8"
-      alt="Banner principal"
-    />
   </div>
   <div class="absolute w-full h-[75%] md:h-auto">
     <img class="Fondo opacity-10 w-[100%] h-[50%] object-cover" src="/imagen2.jpg" alt="fiesta organizada por ajs eventos">
