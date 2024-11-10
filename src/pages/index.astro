@@ -1,8 +1,9 @@
 ---
+import { Dates } from "../isla/Dates";
 import Events from "../components/Events/Events.astro";
 import Layout from "../layouts/Layout.astro";
 ---
-<Layout title="Welcome to Astro.">
+<Layout title="AJS eventos | Inicio">
   <div class="flex flex-col justify-center items-center h-[50vh]">
     <h1 class="text-center translate-y-10 z-10 duration-[1s]">
       Bienvenido a AJS eventos
@@ -11,43 +12,65 @@ import Layout from "../layouts/Layout.astro";
       >Haz de tu evento una experiencia inolvidable</span
     >
   </div>
-  <div class="relative bg-black w-full h-[100vh] bg-no-repeat bg-cover bg-top">
+  <div class="relative bg-black w-full min-h-[105vh] bg-no-repeat bg-cover bg-top">
     <img
       class="Banner absolute w-full h-full object-cover object-top"
       src="https://scontent.flpb1-1.fna.fbcdn.net/v/t39.30808-6/465715677_1027127422758190_6580639191806316818_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=MTRvGja_pDgQ7kNvgHBdq8j&_nc_zt=23&_nc_ht=scontent.flpb1-1.fna&_nc_gid=A3Lyd46RKKJMPVDqTHLBYMH&oh=00_AYBFcil36woWYusA2P7AlKj9GmNKZP2YUnnvhpBiD7syiA&oe=673280C8"
       alt="Banner principal"
     />
   </div>
-  <img class="absolute opacity-20" src="https://scontent.flpb3-2.fna.fbcdn.net/v/t39.30808-6/423581925_835550281915906_8551503985179441310_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=UX5TnwCGfmEQ7kNvgGPmxFx&_nc_zt=23&_nc_ht=scontent.flpb3-2.fna&_nc_gid=AeKyOxdNkUPZGsNGhHd2jx1&oh=00_AYCfiKM6pO0KhXiuDAawKb9BzI4YrKmfv19am_1oe8U1gA&oe=6733F951" alt="fiesta organizada por ajs eventos">
-  <div class="min-h-[60vh] relative max-w-[1000px] m-auto mt-10 text-2xl font-semibold duration-[1s]">
-    <h2 class="mb-5 text-center text-4xl">Organizamos toda clase de eventos:</h2>
+  <div class="absolute w-full h-[75%] md:h-auto">
+    <img class="Fondo opacity-10 w-[100%] h-[50%] object-cover" src="/imagen2.jpg" alt="fiesta organizada por ajs eventos">
+    <img class="Banner opacity-10 w-[100%] h-[50%] object-cover" src="/imagen3.jpg" alt="fiesta organizada por ajs eventos">
+  </div>
+  <div class="relative max-w-[1000px] m-auto flex items-center text-center text-2xl text-gray-200 opacity-0 duration-700">
+    En AJS Eventos, nos dedicamos a crear momentos inolvidables que marcan la vida de quienes confían en nosotros. Con un equipo apasionado y profesional, organizamos bodas, quince años, cumpleaños, eventos privados y públicos. Nuestro compromiso es superar tus expectativas en cada detalle, ofreciendo experiencias únicas y memorables que trascienden el tiempo y reflejan lo mejor de cada ocasión.
+  </div>
+  <section class="flex flex-col gap-10 z-10 relative mt-10 max-w-[1000px] m-auto">
+    <h2 class="mt-10 text-center text-4xl text-gray-100 font-bold"> Los mejores eventos bajo tres pilares:</h2>
+    <div class="flex flex-wrap justify-around items-center md:grid md:grid-cols-3 place-items-center text-gray-200">
+      <div class="flex flex-col items-center justify-center gap-10 translate-y-10 duration-500">
+        <img class="icon" src="/icons/calidad.svg" alt="icon de calidad">
+        <span class="text-3xl font-bold">
+          Calidad
+        </span>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-10 translate-y-10 duration-700">
+        <img class="icon" src="/icons/innovation.svg" alt="icon de innovacion">
+        <span class="text-3xl font-bold">
+          Innovacion 
+        </span>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-10 translate-y-10 duration-1000">
+        <img class="icon" src="/icons/resposibility.svg" alt="icon de calidad">
+        <span class="text-3xl font-bold">
+          Responsabilidad
+        </span>
+      </div>
+    </div>
+  </section>
+  
+  <section class="relative max-w-[1000px] m-auto mt-10 duration-[1s]">
+  <h2 class="mt-24 text-center text-4xl text-gray-100 font-bold">Diferentes tipos de eventos: </h2>
     <Events />
-  </div>
-  <div class="flex flex-col gap-10">
-    <h2 class="mb-5 text-center text-4xl"> LOS MEJORES EVENTOS BAJO TRES PILARES:</h2>
-    <div class="flex flex-wrap items-center justify-around">
-      <span class="text-3xl font-bold">
-        CALIDAD
-      </span>
-    </div>
-    <div class="flex flex-wrap items-center justify-around">
-      <span class="text-3xl font-bold">
-        INNOVACION 
-      </span>
-    </div>
-    <div class="flex flex-wrap items-center justify-around">
-      <span class="text-3xl font-bold">
-        RESPONSABILIDAD
-      </span>
-    </div>
-  </div>
-  <div class="max-w-[1000px] m-auto ">
-    En AJS Eventos, nos dedicamos a crear momentos inolvidables que marcan la vida de quienes confían en nosotros. Con un equipo apasionado y profesional, organizamos bodas, quince años, cumpleaños, y eventos privados y públicos, basándonos en tres pilares fundamentales: calidad, innovación y responsabilidad. Nuestro compromiso es superar tus expectativas en cada detalle, ofreciendo experiencias únicas y memorables que trascienden el tiempo y reflejan lo mejor de cada ocasión.
-  </div>
+  </section>
+  <Dates />
+  <section class="relative max-w-[1000px] m-auto">
+    <h2 class="mt-24 text-center text-4xl text-gray-100 mb-10 font-bold">¿Por que elegirnos?</h2>
+    <p class="text-center text-lg">
+      Elegir AJS Eventos es optar por una experiencia sin igual y un servicio que se destaca por su calidad, creatividad e integridad. Nos comprometemos a transformar tus ideas en realidades excepcionales, manteniendo los más altos estándares en cada detalle. Con una visión innovadora y un enfoque responsable, planificamos cada evento pensando en tus necesidades y en el impacto positivo en nuestro entorno. Desde bodas de ensueño hasta eventos públicos impactantes, en AJS Eventos combinamos profesionalismo y pasión para que tu celebración sea verdaderamente inolvidable.
+    </p>
+  </section>
 </Layout>
 <style>
   .Banner {
     mask-image: linear-gradient(to top, #000 70%, transparent);
+  }
+  .Fondo{
+    mask-image: linear-gradient(to bottom, #000 90%, transparent);
+  }
+  .icon{
+    width: 89px;
   }
 </style>
 <script>

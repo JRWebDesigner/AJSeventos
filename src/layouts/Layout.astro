@@ -1,4 +1,5 @@
 ---
+import Footer from '../components/Footer/Footer.astro';
 import Header from '../components/Header/Header.astro';
 
 interface Props {
@@ -14,15 +15,16 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="" href="/ajseventos.png" />
+		<link rel="icon" href="/ajseventos.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-black min-h-screen text-white">
+	<body class="relative bg-black min-h-[70vh] text-white grid grid-rows-[1fr_2fr_0.1fr">
 		<Header />
 		<main class="relative">
 			<slot />
 		</main>
+		<Footer />
 	</body>
 </html>
 <style is:global>
