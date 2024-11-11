@@ -2,6 +2,35 @@
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout title="AJS eventos | Contact">
-    <h1 class="text-center text-4xl font-bold">CONTACTANOS</h1>
-
+    <h1 class="text-center text-2xl md:text-4xl font-bold">CONTACTANOS</h1>
+    <div class="max-w-[1000px] w-[90%] m-auto mt-10">
+        ¿Listo para hacer de tu evento una experiencia memorable? En AJS Eventos estamos aquí para ayudarte a planificar cada detalle. Contáctanos y descubre cómo podemos convertir tus sueños en una celebración única e inolvidable.
+    </div>
+    <form action="#" method="POST" class="space-y-4 w-[70%] m-auto mt-16">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-300">Nombre</label>
+          <input type="text" id="name" name="name" required
+                 class="mt-1 block w-full px-3 py-2 bg-gray-700 text-white placeholder-gray-400 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+        </div>
+        <div>
+          <label for="phone" class="block text-sm font-medium text-gray-300">Teléfono</label>
+          <input type="tel" id="phone" name="phone" required
+                 class="mt-1 block w-full px-3 py-2 bg-gray-700 text-white placeholder-gray-400 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-300">Gmail</label>
+          <input type="email" id="email" name="email" placeholder="example@gmail.com" required
+                 class="mt-1 block w-full px-3 py-2 bg-gray-700 text-white placeholder-gray-400 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-300">Consulta</label>
+          <textarea id="message" name="message" rows="4" required
+                    class="mt-1 block w-full px-3 py-2 bg-gray-700 text-white placeholder-gray-400 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+        </div>
+          <div>
+          <button type="submit" class="w-full px-4 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+            Enviar
+          </button>
+        </div>
+      </form>
 </Layout>
