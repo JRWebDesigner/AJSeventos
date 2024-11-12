@@ -5,10 +5,10 @@ export function UpcomingDates() {
   <table className="rounded-3xl min-w-full">
     <thead className="font-bold">
       <tr>
-        <th className="py-3 px-4 border-b-2 border-gray-300 md:text-sm text-[0.6rem] font-semibold text-center">Fecha</th>
-        <th className="py-3 px-4 border-b-2 border-gray-300 md:text-sm text-[0.6rem] font-semibold text-center">Ciudad</th>
-        <th className="py-3 px-4 border-b-2 border-gray-300 md:text-sm text-[0.6rem] font-semibold text-center">Lugar</th>
-        <th className="py-3 px-4 border-b-2 border-gray-300 md:text-sm text-[0.6rem] font-semibold text-center">Tickets</th>
+        <th className="py-3 px-4 border-b-2 border-gray-300 md:text-sm text-[0.6rem] font-semibold text-center text-[#3AC9BE]">Fecha</th>
+        <th className="py-3 px-4 border-b-2 border-gray-300 md:text-sm text-[0.6rem] font-semibold text-center text-[#3AC9BE]">Ciudad</th>
+        <th className="py-3 px-4 border-b-2 border-gray-300 md:text-sm text-[0.6rem] font-semibold text-center text-[#3AC9BE]">Lugar</th>
+        <th className="py-3 px-4 border-b-2 border-gray-300 md:text-sm text-[0.6rem] font-semibold text-center text-[#3AC9BE]">Tickets</th>
       </tr>
     </thead>
     <tbody>

@@ -19,7 +19,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="relative bg-black min-h-[70vh] text-white grid grid-rows-[1fr_2fr_0.1fr">
+	<body class="relative bg-black min-h-[70vh] text-white">
 		<Header />
 		<main class="relative">
 			<slot />
@@ -35,6 +35,24 @@ const { title } = Astro.props;
     mask-image: linear-gradient(to bottom, #000 90%, transparent);
   }
 	p{
-		opacity: .8;
+		opacity: .96;
+	}
+	h1,h2{
+		text-transform: uppercase;
+	}
+	h3{
+		/* color:transparent;
+		background:linear-gradient(to right, #CCCCCC 10%, #3AC9BE 90%);
+		background-clip: text; */
+		color:#E5E5E5;
+	}
+	.degrad{
+		color:transparent;
+		background:linear-gradient(to right, #84d66d , #3AC9BE );
+		background-clip: text;
+	}
+	.textDegrad{
+		color:#3AC9BE;
+		background-clip: text;
 	}
 </style>
