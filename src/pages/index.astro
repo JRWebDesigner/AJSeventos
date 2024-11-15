@@ -2,6 +2,7 @@
 import { Dates } from "../isla/Dates";
 import Events from "../components/Events/Events.astro";
 import Layout from "../layouts/Layout.astro";
+import Post from "../components/Posts/Post.astro";
 ---
 <Layout title="AJS eventos | Inicio">
  
@@ -19,7 +20,7 @@ import Layout from "../layouts/Layout.astro";
       Bienvenido a <br> <span class="degrad">AJS eventos</span>
     </h1>
     <span class="font-semibold text-center text-lg md:text-3xl opacity-0 duration-[6s]"
-      >Haz de tu evento una <span class="textDegrad">experiencia inolvidable</span></span
+      >Haz de tu evento una <span class="text-with-stroke">experiencia inolvidable</span></span
     >
   </div>
     <img class="absolute object-cover Fondo opacity-15 w-full h-full" src="/imagen2.jpg" />
@@ -27,7 +28,7 @@ import Layout from "../layouts/Layout.astro";
       En AJS Eventos, nos dedicamos a crear momentos inolvidables que marcan la vida de quienes confían en nosotros. Con un equipo apasionado y profesional, organizamos bodas, quince años, cumpleaños, eventos privados y públicos. Nuestro compromiso es <span class="textDegrad">superar tus expectativas en cada detalle</span>, ofreciendo experiencias únicas y memorables que trascienden el tiempo y reflejan lo mejor de cada ocasión.
     </p>
     <section class="flex flex-col gap-10 z-10 relative mt-10 max-w-[1000px] m-auto w-[90%] py-20">
-      <h2 class="mt-10 text-center text-xl md:text-4xl font-bold"> Los mejores eventos <span class="textDegrad">bajo tres pilares:</span></h2>
+      <h2 class="mt-10 text-center text-xl md:text-4xl font-bold"> Los mejores eventos <span class="degrad">bajo tres pilares:</span></h2>
       <div class="flex flex-wrap justify-around items-center gap-10 md:grid md:grid-cols-3 place-items-center">
         <div class="flex flex-col items-center justify-center gap-10 ">
           <img class="icon translate-y-10 duration-500" src="/icons/innovation.svg" alt="icon de innovacion">
@@ -53,15 +54,15 @@ import Layout from "../layouts/Layout.astro";
   <div class="relative py-5">
     <img class="absolute object-cover Banner opacity-15 w-full h-full" src="/imagen3.jpg" />
     <section class="relative max-w-[1000px] m-auto duration-[1s]">
-    <h2 class="text-center text-xl md:text-4xl font-bold">Diferentes <span class="textDegrad">tipos de eventos: </span></h2>
+    <h2 class="text-center text-xl md:text-4xl font-bold">Diferentes <span class="degrad">tipos de eventos: </span></h2>
       <Events />
     </section>
-    <Dates />
+    <Post />
   </div>
   <div class="relative py-5 mb-8">
     <img class="absolute Banner object-cover opacity-15 w-full h-full" src="/imagen4.jpg" />
     <section class="relative max-w-[1000px] w-[90%] m-auto">
-      <h2 class="mt-24 text-center text-xl md:text-4xl mb-3 font-bold">¿Por que <span class="textDegrad ">elegirnos</span>?</h2>
+      <h2 class="mt-24 text-center text-xl md:text-4xl mb-3 font-bold">¿Por que <span class="degrad">elegirnos</span>?</h2>
       <p class="text-center text-lg md:text-2xl opacity-80">
         Elegir AJS Eventos es optar por una experiencia sin igual y un servicio que se destaca por su calidad, creatividad e integridad. Nos comprometemos a transformar tus ideas en realidades excepcionales, manteniendo los más altos estándares en cada detalle. Con una visión innovadora y un enfoque responsable, planificamos cada evento pensando en tus necesidades y en el impacto positivo en nuestro entorno. Desde bodas de ensueño hasta eventos públicos impactantes, en AJS Eventos combinamos profesionalismo y pasión para que tu celebración sea verdaderamente inolvidable.
       </p>
