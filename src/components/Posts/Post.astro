@@ -31,8 +31,8 @@ const sortedPosts = posts.sort((a, b) => parseCustomDate(a.Fecha) - parseCustomD
   <h2 class="my-14 text-center text-2xl md:text-4xl font-bold text-with-stroke">Próximos eventos</h2>
   <div id="containerDates" class="flex w-[90%] m-auto justify-around items-center overflow-y-auto gap-16 pb-5">
     {sortedPosts.map((item) => (
-      <a key={item._id} class="Links w-[100%] md:w-auto m-auto" href={item.link} target="_blank" rel="noopener noreferrer">
-        <img class="max-w-[270px] rounded-xl m-auto object-cover h-[300px]" src={item.image.asset.url} alt="Event Image" />
+      <a key={item._id} class="Links w-[100%] md:w-auto m-auto hover:scale-[1.03] duration-150" href={item.link} target="_blank" rel="noopener noreferrer">
+        <img class="max-w-[270px] rounded-xl m-auto object-cover h-[300px]  hover:shadow-xl hover:shadow-rose-900" src={item.image.asset.url} alt="Event Image" />
         <span class="text-sm md:text-xl font-bold flex justify-center items-center">{item.Fecha} - {item.Ciudad}</span>
       </a>
     ))}

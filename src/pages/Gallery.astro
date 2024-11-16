@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro'
+import {getPhotos} from '../sanity/lib/getPhotos'
+
+const photos = await getPhotos()
+---
+<Layout title="Galeria de Fotos">
+    <div class="min-h-[90vh] bg-gradient-to-t to-[#6200ff1e] from-black pt-10">
+        <h1 class="text-center text-2xl md:text-4xl font-bold text-with-stroke pb-10">Galeria de Fotos</h1>
+        <div id="modal" class="hidden fixed top-0 left-0 w-full h-screen bg-black bg-opacity-90 flex justify-center items-center">
+            <div class="relative flex justify-center items-center">
+                <img id="modal-image" class="max-w-[500px] rounded-2xl m-auto" src="" alt="Imagen ampliada">
+                <svg id="close" class="absolute top-3 right-3 cursor-pointer text-white" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M18 6l-12 12"/>
+                    <path d="M6 6l12 12"/>
+                </svg>
+            </div>
+        </div>
+        <div class="flex justify-center gap-7 items-center flex-row-reverse flex-wrap">
+            {photos.map((item) => (
+                <img src={item.image.asset.url}  alt={item.image.alt || "Descripción no disponible"}  class="imgGallery thumbnail" />
+            ))}
+        </div>
+    </div>
+</Layout>
+<style>
+    .imgGallery{
+        max-width: 340px;
+        border-radius: 30px;
+        cursor:pointer;
+    }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("modal");
+        const modalImage = document.getElementById("modal-image");
+        const closeModal = document.getElementById("close");
+        const thumbnails = document.querySelectorAll(".thumbnail");
+
+        thumbnails.forEach((thumbnail) => {
+            thumbnail.addEventListener("click", (e) => {
+                modalImage.src = e.target.src; 
+                modal.classList.remove("hidden"); 
+            });
+        });
+
+        closeModal.addEventListener("click", () => {
+            modal.classList.add("hidden"); 
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.classList.add("hidden");
+            }
+        });
+    });
+</script>
