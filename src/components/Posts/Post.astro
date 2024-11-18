@@ -27,7 +27,7 @@ function parseCustomDate(dateString) {
 const sortedPosts = posts.sort((a, b) => parseCustomDate(a.Fecha) - parseCustomDate(b.Fecha));
 
 ---
-<div class="relative min-h-[50vh] mb-10">
+<div class="relative min-h-[50vh] flex justify-center items-center flex-col">
   <h2 class="my-14 text-center text-2xl md:text-4xl font-bold text-with-stroke">Próximos eventos</h2>
   <div id="containerDates" class="flex w-[90%] m-auto justify-around items-center overflow-y-auto gap-16 pb-5">
     {sortedPosts.map((item) => (
